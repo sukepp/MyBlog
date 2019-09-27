@@ -4,32 +4,29 @@
 <title>SUKEPP Blog</title>
 <meta charset="utf-8">
 <meta name="description" content="Personal Blog website of SUKEPP">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Piers Han</h1>
-        <hr>
-        <nav>
-            <ul>
-                <li><a href="index.html">WELCOME</a></li>
-                <li>
-                    WORK
-                    <ul>
-                        <li><a href="work_algrithm.html">Algrithm</a></li>
-                        <li><a href="work_px4.html">PX4</a></li>
-                    </ul>
-                </li>
-                <li>
-                    LIFE
-                    <ul>
-                        <li><a href="life_film.html">Film</a></li>
-                        <li><a href="life_vlog.html">Vlog</a></li>
-                    </ul>
-                </li>
-                <li><a href="about.html">ABOUT</a></li>
-            </ul>
-        </nav>
-        <hr>
+    <header class="header">
+        <h1 class="logo">Piers' Blog</h1>
+        <div class="nav main-nav">
+            <a href="index.html">WELCOME</a>
+            <div class="dropdown">
+                <button class="dropbtn">WORK</button>
+                <div class="dropdown-content">
+                    <a href="work_algrithm.html">Algrithm</a>
+                    <a href="work_px4.html">PX4</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">LIFE</button>
+                <div class="dropdown-content">
+                    <a href="life_film.html">Film</a>
+                    <a href="life_vlog.html">Vlog</a>
+                </div>
+            </div>
+            <a href="about.html">ABOUT</a>
+        </div>
     </header>
     <section>
         <h1>PX4</h1>
@@ -46,14 +43,11 @@
             </li>
         </ul>
     </section>
-    <footer>
-        <hr>
-        <ul>
-            <li>Call</li>
-            <li><a href="">Email</a></li>
-            <li><a href="">Follow me</a></li>
-        </ul>
-        <hr>
+    <footer class="nav footer-nav">
+        <div class="nav footer-nav">
+            <a href="">Email</a>
+            <a href="">Follow me</a>
+        </div>
     </footer>
 </body>
 </html>
