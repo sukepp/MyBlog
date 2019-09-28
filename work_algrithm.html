@@ -35,7 +35,7 @@
                 <div class="read-item">
                     <h2 class="read-item-title">The fast sort</h2>
                     <h3>1. Definition:</h3>
-                    <p><span>Quick sorting, which is also the most commonly used sorting algorithm in practice, is fast and efficient. Just like the name, quick sorting is one of the best sorting algorithms.</span></p>
+                    <p>Quick sorting, which is also the most commonly used sorting algorithm in practice, is fast and efficient. Just like the name, quick sorting is one of the best sorting algorithms.</p>
                     <h3>2. Algorithm description:</h3>
                     <p>The idea of quick sorting is the idea of divide and conquer.
                         <span id="read-dots-1">...</span></p>
@@ -107,8 +107,33 @@
                     <button onclick="readFunc('read-dots-1', 'read-more-1', 'readbtn-1')" class="read-btn" id="readbtn-1">Read more</button>
                 </div>
                 <div class="read-item">
-                    <h3>The traverse of tree</h3>
-                    <p>Implementation of<span id="read-dots-2">...</span><span class="read-more" id="read-more-2"> the traverse of tree</span></p>
+                    <h2 class="read-item-title">The shell sort</h2>
+                    <h3>1. Definition:</h3>
+                    <p>The essence of Shell sorting is group insertion sorting. This method is also called narrowing incremental sorting. It was named after DL.Shell was proposed in 1959.</p>
+                    <h3>2. Algorithm description:</h3>
+                    <p>The idea of quick sorting is the idea of divide and conquer.
+                        <span id="read-dots-2">...</span></p>
+                    <div class="read-more" id="read-more-2">
+                        <p>At first, the entire sequence of elements to be sorted is divided into several sub-sequences (composed of elements separated by some "increment") for direct insertion sorting, and then the increments are sequentially reduced and then sorted. </p>
+                        <p>When the elements in the entire sequence are basically ordered (the increment is small enough), a direct insert sort is performed on all elements. Because direct insertion sorting is very efficient when the elements are basically ordered (close to the best case), Shell sorting is much more efficient in time efficiency than the first two methods.</p>
+                        <h3>3. Code implementation:</h3>
+                        <pre>
+void Shell_Sort(int a[], int n)
+{
+    int i, j, d, temp;
+    for(d = n / 2; d &gt= 1; d /= 2) 
+        for(i = d; i &lt= n; i++) {
+            temp = a[i];
+            j = i;
+            while(j &gt= d && a[j - d] &gt temp) {
+                a[j] = a[j - d];
+                j -= d;
+            }
+            a[j] = temp;
+        }
+}
+                        </pre>
+                    </div>
                     <button onclick="readFunc('read-dots-2', 'read-more-2', 'readbtn-2')" class="read-btn" id="readbtn-2">Read more</button>
                 </div>
             </div>

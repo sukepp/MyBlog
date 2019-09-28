@@ -94,7 +94,7 @@
 }
 
 .section .read-item {
-    padding: 1% 5% 3% 5%;
+    padding: 1% 5% 5% 5%;
     margin-bottom: 3%;
     border-bottom: 2px solid black;
 }
@@ -109,12 +109,23 @@
 
 .section .read-more {
     display: none;
+    padding-bottom: 10px;
+}
+
+.section table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+.section table {
+    margin-bottom: 25px;
 }
 
 .section .read-btn {
     float: right;
     position: relative;
-    bottom: 20px;
+    bottom: 0px;
 }
 
 .section .sidebar {
@@ -128,7 +139,6 @@
 
 .section .sidebar-search input[type=text] {
     padding: 6px;
-/*    border: 1px solid black;*/
     margin-top: 20px;
     margin-bottom: 20px;
 }

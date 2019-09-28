@@ -28,20 +28,105 @@
             <a href="about.html">ABOUT</a>
         </div>
     </header>
-    <section>
-        <h1>PX4</h1>
-        <ul>
-            <li>
-                <h3>The software architecture of PX4</h3>
-                <p>There are three parts of the software</p>
-                <button>Read more</button>
-            </li>
-            <li>
-                <h3>The hardware architecture of PX4</h3>
-                <p>There are four parts of the hardware</p>
-                <button>Read more</button>
-            </li>
-        </ul>
+    <section class="section">
+        <div class="mainbar">
+            <h1 class="read-categary">Category: PX4</h1>
+            <div class="read-items">
+                <div class="read-item">
+                    <h2 class="read-item-title">The software architecture of PX4</h2>
+                    <p>The PX4 autopilot software can be divided into three main parts: real-time operating system, middleware and flight control stack.</p>
+                    <h3>1.Nuttx real-time operating system:</h3>
+                    <p>It Provides a POSIX-style user operating environment for underlying task scheduling.<span id="read-dots-1">...</span></p>
+                    <div class="read-more" id="read-more-1">
+                        <h3>2. PX4 middleware:</h3>
+                        <p>The PX4 middleware runs on top of the operating system and provides device drivers and a micro object request broker (uORB) for asynchronous communication between individual tasks running on the pilot. My understanding is that it can be seen as an interprocess communication mechanism.</p>
+                        <h3>3. PX4 flight control stack:</h3>
+                        <p>The flight control stack can use the PX4 control software stack or other control software such as APM: Plane, APM: Copter, but must run on the PX4 middleware.</p>
+                        <p>This stack can be divided into 4 parts:</p>
+                        <table>
+                            <tr>
+                                <th>Name</th>
+                                <th>Definition</th>
+                            </tr>
+                            <tr>
+                                <td>Navigation part</td>
+                                <td>The mode of operation and the mission are determined based on the current flight status of the aircraft and the user commands received.</td>
+                            </tr>
+                            <tr>
+                                <td>Position and posture estimation part</td>
+                                <td>Get the position and attitude information through the sensor.</td>
+                            </tr>
+                            <tr>
+                                <td>Position and attitude control part</td>
+                                <td>The flight state is controlled to achieve the desired position and attitude based on the desired deviation from the current.</td>
+                            </tr>
+                            <tr>
+                                <td>Controller output part</td>
+                                <td>Mixer and actuator, pwm limiter.</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button onclick="readFunc('read-dots-1', 'read-more-1', 'readbtn-1')" class="read-btn" id="readbtn-1">Read more</button>
+                </div>
+                <div class="read-item">
+                    <h2 class="read-item-title">The hardware architecture of PX4</h2>
+                    <h3>1.Reference link</h3>
+                    <p><a href="https://blog.csdn.net/dianzihuaixiaozi/article/details/51645937"></a>The blog of thunder_fan</p>
+                    <h3>2. Hardware structure:</h3>
+                    <p>The structure can be divided into four parts.<span id="read-dots-2">...</span>
+                    <div class="read-more" id="read-more-2">
+                        <table>
+                            <tr>
+                                <th>Type</th>
+                                <th>Details</th>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Processor</td>
+                                <td>32-bit STM32F427 Cortex M4 core main processor with FPU</td>
+                            </tr>
+                            <tr>
+                                <td>32-bit STM32F103 runaway protection coprocessor</td>
+                            </tr>
+                            <tr>
+                                <td>Memory</td>
+                                <td>256KB RAM</td>
+                            </tr>
+                            <tr>
+                                <td>Rom</td>
+                                <td>2MB Flash</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Sensors</td>
+                                <td>ST's L3GD20H 16-bit precision gyroscope</td>
+                            </tr>
+                            <tr>
+                                <td>ST's LSM303D 14-bit accelerometer and magnetometer</td>
+                            </tr>
+                            <tr>
+                                <td>Invensense's MPU6000's three-axis accelerometer and gyroscope</td>
+                            </tr>
+                            <tr>
+                                <td>MEAS MS5611 barometer</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button onclick="readFunc('read-dots-2', 'read-more-2', 'readbtn-2')" class="read-btn" id="readbtn-2">Read more</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="sidebar">
+            <div class="sidebar-search">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="sidebar-category">
+                <h3>My Posts:</h3>
+                <a href="work_algrithm.html">Algorithm (2)</a>
+                <a href="work_px4.html">Px4 (2)</a>
+                <a href="life_film.html">Film (2)</a>
+                <a href="life_vlog.html">Vlog (2)</a>
+            </div>
+        </div>
     </section>
     <footer class="nav footer-nav">
         <div class="nav footer-nav">
@@ -49,5 +134,23 @@
             <a href="">Follow me</a>
         </div>
     </footer>
+
+<script>
+    function readFunc(read_dots, read_more, readbtn) {
+        var readDots = document.getElementById(read_dots);
+        var readMore = document.getElementById(read_more);
+        var readBtn = document.getElementById(readbtn);
+        
+        if (readDots.style.display == "none") {
+            readDots.style.display = "inline";
+            readBtn.innerHTML = "Read more";
+            readMore.style.display = "none";
+        } else {
+            readDots.style.display = "none";
+            readBtn.innerHTML = "Read less";
+            readMore.style.display = "inline";
+        }
+    }
+</script>
 </body>
 </html>
