@@ -75,8 +75,74 @@
   display: block;
 }
 
-.read-more {
+.section {
+    overflow: hidden;
+}
+
+.section .mainbar {
+    width: 70%;
+    float: left;
+    padding: 3%;
+}
+
+.section read-items {
+    padding: 0;
+}
+
+.section .read-categary, .section .read-item-title {
+    text-align: left;
+}
+
+.section .read-item {
+    padding: 1% 5% 3% 5%;
+    margin-bottom: 3%;
+    border-bottom: 2px solid black;
+}
+
+.section .read-item:first-child {
+    border-top: 2px solid black;
+}
+
+.section .read-item:last-child {
+    border-bottom: none;
+}
+
+.section .read-more {
     display: none;
+}
+
+.section .read-btn {
+    float: right;
+    position: relative;
+    bottom: 20px;
+}
+
+.section .sidebar {
+    float: left;
+    padding: 3%;
+}
+
+.section .sidebar-search {
+    border-bottom: 1px solid black;
+}
+
+.section .sidebar-search input[type=text] {
+    padding: 6px;
+/*    border: 1px solid black;*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.section .sidebar-category {
+    margin-top: 50%;
+}
+
+.section .sidebar a {
+    display: block;
+    text-decoration: none;
+    color: saddlebrown;
+    padding-bottom: 10px;
+    font-size: 1.2em;
 }
 
 .footer-nav li a {

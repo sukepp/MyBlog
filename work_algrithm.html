@@ -28,24 +28,104 @@
             <a href="about.html">ABOUT</a>
         </div>
     </header>
-    <section>
-        <h1>Algrithm</h1>
-        <ul>
-            <li>
-                <h3>The fast sort</h3>
-<!--
-                <p>Implementation of<span id="read-dots-1">...</span><span id="read-more-1"> fast sort</span></p>
-                <button onclick="readFunc_1()" id="readbtn-1">Read more</button>
--->
-                <p>Implementation of<span id="read-dots-1">...</span><span class="read-more" id="read-more-1"> fast sort</span></p>
-                <button onclick="readFunc('read-dots-1', 'read-more-1', 'readbtn-1')" id="readbtn-1">Read more</button>
-            </li>
-            <li>
-                <h3>The traverse of tree</h3>
-                <p>Implementation of<span id="read-dots-2">...</span><span class="read-more" id="read-more-2"> the traverse of tree</span></p>
-                <button onclick="readFunc('read-dots-2', 'read-more-2', 'readbtn-2')" id="readbtn-2">Read more</button>
-            </li>
-        </ul>
+    <section class="section">
+        <div class="mainbar">
+            <h1 class="read-categary">Category: Algrithm</h1>
+            <div class="read-items">
+                <div class="read-item">
+                    <h2 class="read-item-title">The fast sort</h2>
+                    <h3>1. Definition:</h3>
+                    <p><span>Quick sorting, which is also the most commonly used sorting algorithm in practice, is fast and efficient. Just like the name, quick sorting is one of the best sorting algorithms.</span></p>
+                    <h3>2. Algorithm description:</h3>
+                    <p>The idea of quick sorting is the idea of divide and conquer.
+                        <span id="read-dots-1">...</span></p>
+                    <div class="read-more" id="read-more-1">
+                        <p>Quick sorting is to find an element (in theory, you can find one) as a reference, and then partition the array so that the value of the element on the left side of the reference is not greater than the reference value, and the value of the element on the right side of the reference is not less than the reference value. Thus, the element as a reference is adjusted to the correct position after sorting. Recursive quick sorting, adjusting other n-1 elements to the correct position after sorting. Finally, each element is in the correct position after sorting, and the sorting is completed. </p>
+                        <p>Therefore, the core algorithm of the quick sort algorithm is the partition operation, that is, how to adjust the position of the reference and adjust the final position of the return reference to divide and recur.</p>
+                        <h3>3. Code implementation:</h3>
+                        <pre>
+    #include &ltstdio.h&gt
+    #include &ltstdlib.h&gt
+    #include &ltiostream&gt
+
+    using namespace std;
+
+    void quick_sort(int a[], int left, int right)
+    {
+        int i, j, pivot, temp;
+
+        if(left &gt= right)
+            return;
+
+        i = left;
+        j = right;
+        pivot = a[left];
+
+        while(i &lt j) {
+            while(a[j] &gt= pivot && i &lt j) { 
+                j--;
+            }
+            while(a[i] &lt= pivot && i &lt j) {
+                i++;
+            }
+            temp = a[i];
+            a[i] = a[j];
+            a[j] = temp;
+        }
+
+        a[left] = a[i];
+        a[i] = pivot;
+        quick_sort(a, left, i - 1);
+        quick_sort(a, i + 1, right);
+    }
+
+    void Quick_Sort(int a[], int n)
+    {
+        quick_sort(a, 0, n - 1);
+    }
+
+    int main()
+    {
+        int i;
+        int a[] = {5, 4, 3, 9, 8, 7, 6, 2, 1, 0};
+
+        for(i = 0; i &lt 10; i++)
+            printf("%d ", a[i]);
+        printf("\n");
+
+        Quick_Sort(a, 10);
+
+        for(i = 0; i &lt 10; i++)
+            printf("%d ", a[i]);
+        printf("\n");
+
+        system("pause");
+        return 0;
+    }
+                        </pre>
+                    </div>
+                    <button onclick="readFunc('read-dots-1', 'read-more-1', 'readbtn-1')" class="read-btn" id="readbtn-1">Read more</button>
+                </div>
+                <div class="read-item">
+                    <h3>The traverse of tree</h3>
+                    <p>Implementation of<span id="read-dots-2">...</span><span class="read-more" id="read-more-2"> the traverse of tree</span></p>
+                    <button onclick="readFunc('read-dots-2', 'read-more-2', 'readbtn-2')" class="read-btn" id="readbtn-2">Read more</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="sidebar">
+            <div class="sidebar-search">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="sidebar-category">
+                <h3>My Posts:</h3>
+                <a href="work_algrithm.html">Algorithm (2)</a>
+                <a href="work_px4.html">Px4 (2)</a>
+                <a href="life_film.html">Film (2)</a>
+                <a href="life_vlog.html">Vlog (2)</a>
+            </div>
+        </div>
     </section>
     <footer class="nav footer-nav">
         <div class="nav footer-nav">
@@ -55,21 +135,6 @@
     </footer>
     
 <script>
-//    function readFunc_1() {
-//        var readDots = document.getElementById("read-dots-1");
-//        var readMore = document.getElementById("read-more-1");
-//        var readBtn = document.getElementById("readbtn-1");
-//        
-//        if (readDots.style.display == "none") {
-//            readDots.style.display = "inline";
-//            readBtn.innerHTML = "Read more";
-//            readMore.style.display = "none";
-//        } else {
-//            readDots.style.display = "none";
-//            readBtn.innerHTML = "Read less";
-//            readMore.style.display = "inline";
-//        }
-//    }
     function readFunc(read_dots, read_more, readbtn) {
         var readDots = document.getElementById(read_dots);
         var readMore = document.getElementById(read_more);
