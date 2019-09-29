@@ -7,7 +7,9 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
+    <div class="body-container">
+        <header class="header">
+        <img src="images/bg_01.png">
         <h1 class="logo">Piers' Blog</h1>
         <div class="nav main-nav">
             <a href="index.html">WELCOME</a>
@@ -28,19 +30,41 @@
             <a href="about.html">ABOUT</a>
         </div>
     </header>
-    <section class="section">
-        <h2>Welcome</h2>
-        <p>Hi, there! I am Piers Han. Welcome to my blog!</p>
-        <h2>Personal Links</h2>
-        <a href="">Github</a>
-        <br>
-        <a href="">Linkdin</a>
-    </section>
-    <footer class="nav footer-nav">
-        <div class="nav footer-nav">
-            <a href="">Email</a>
-            <a href="">Follow me</a>
+        <section class="section">
+        <div class="mainbar welcome-content">
+            <h2>Welcome</h2>
+            <p>Hi, there! I am Piers Han. Welcome to my blog!</p>
+            <p>I want to shere my experience about work and life with you. The topics include algrithm, PX4, film, and vlog.</p>
+            <p>I am a first-year student in University College Dublin. My major is Computer Science.</p>
+            <p>Please contact me via <span style="text-decoration:underline">hanpulous@gmail.com</span></p>
+            <h2>Personal Links</h2>
+            <div class="links">
+                <a href="">Github</a>
+                <a href="">Linkedin</a>
+                <a href="">CSDN</a>
+            </div>
         </div>
+        <div class="sidebar">
+            <div class="sidebar-search">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="sidebar-category">
+                <h3>My Posts:</h3>
+                <a href="work_algrithm.html">Algorithm (2)</a>
+                <a href="work_px4.html">Px4 (2)</a>
+                <a href="life_film.html">Film (2)</a>
+                <a href="life_vlog.html">Vlog (2)</a>
+            </div>
+        </div>
+    </section>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="nav footer-nav">
+                    <a href="">Email</a>
+                    <a href="">Follow me</a>
+                </div>
+            </div>
     </footer>
+    </div>
 </body>
 </html>
