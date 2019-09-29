@@ -7,7 +7,9 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
+    <div class="body-container">
+        <header class="header">
+        <img src="images/bg_01.png">
         <h1 class="logo">Piers' Blog</h1>
         <div class="nav main-nav">
             <a href="index.html">WELCOME</a>
@@ -28,33 +30,64 @@
             <a href="about.html">ABOUT</a>
         </div>
     </header>
-    <section>
-        <h2>Education</h2>
-        <ul>
-            <li>University College Dublin 2019.09 - 2020.12</li>
-            <li>North University of China 2012.09 - 2016.07</li>
-        </ul>
-        <h2>Work Experience</h2>
-        <ul>
-            <li>Linux application engineer Suzhou No.9 Corporation</li>
-            <li>Embeded software engineer Thundersoft Corporation</li>
-        </ul>
-        <h2>Projects</h2>
-        <ul>
-            <li>Self-service printer</li>
-            <li>Household automatic watering system</li>
-        </ul>
-        <h2>Skills</h2>
-        <ul>
-            <li>Languages: c/c++, golang</li>
-            <li>Tools: Keil, Vim, Sublime, git</li>
-        </ul>
-    </section>
-    <footer class="nav footer-nav">
-        <div class="nav footer-nav">
-            <a href="">Email</a>
-            <a href="">Follow me</a>
-        </div>
-    </footer>
+        <section class="section">
+            <div class="mainbar">
+                <h2>Education</h2>
+                <ul>
+                    <li>University College Dublin 2019.09 - 2020.12</li>
+                    <li>North University of China 2012.09 - 2016.07</li>
+                </ul>
+                <h2>Work Experience</h2>
+                <ul>
+                    <li>Linux application engineer Suzhou No.9 Corporation</li>
+                    <li>Embeded software engineer Thundersoft Corporation</li>
+                </ul>
+                <h2>Projects</h2>
+                <ul>
+                    <li>Self-service printer</li>
+                    <li>Household automatic watering system</li>
+                </ul>
+                <h2>Skills</h2>
+                <ul>
+                    <li>Languages: C/C++, Golang</li>
+                    <li>Tools: Keil, Vim, Sublime, Git</li>
+                </ul>
+            </div>
+            <div class="sidebar">
+                <div class="sidebar-search">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="sidebar-category">
+                    <h3>My Posts:</h3>
+                    <table>
+                        <tr>
+                            <td><a href="work_algrithm.html">Algorithm</a></td>
+                            <td class="posts-num">2</td>
+                        </tr>
+                        <tr>
+                            <td><a href="work_px4.html">PX4</a></td>
+                            <td class="posts-num">2</td>
+                        </tr>
+                        <tr>
+                            <td><a href="life_film.html">Film</a></td>
+                            <td class="posts-num">2</td>
+                        </tr>
+                        <tr>
+                            <td><a href="life_vlog.html">Vlog</a></td>
+                            <td class="posts-num">2</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="nav footer-nav">
+                    <a href="mailto:hanpulous@gmail.com" target="_blank">Email</a>
+                    <a href="https://www.facebook.com/profile.php?id=100009029522286" target="_blank">Follow me</a>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

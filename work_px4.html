@@ -7,7 +7,9 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
+    <div class="body-container">
+        <header class="header">
+        <img src="images/bg_01.png">
         <h1 class="logo">Piers' Blog</h1>
         <div class="nav main-nav">
             <a href="index.html">WELCOME</a>
@@ -28,7 +30,7 @@
             <a href="about.html">ABOUT</a>
         </div>
     </header>
-    <section class="section">
+        <section class="section">
         <div class="mainbar">
             <h1 class="read-categary">Category: PX4</h1>
             <div class="read-items">
@@ -123,19 +125,36 @@
             </div>
             <div class="sidebar-category">
                 <h3>My Posts:</h3>
-                <a href="work_algrithm.html">Algorithm (2)</a>
-                <a href="work_px4.html">Px4 (2)</a>
-                <a href="life_film.html">Film (2)</a>
-                <a href="life_vlog.html">Vlog (2)</a>
+                <table>
+                    <tr>
+                        <td><a href="work_algrithm.html">Algorithm</a></td>
+                        <td class="posts-num">2</td>
+                    </tr>
+                    <tr>
+                        <td><a href="work_px4.html">PX4</a></td>
+                        <td class="posts-num">2</td>
+                    </tr>
+                    <tr>
+                        <td><a href="life_film.html">Film</a></td>
+                        <td class="posts-num">2</td>
+                    </tr>
+                    <tr>
+                        <td><a href="life_vlog.html">Vlog</a></td>
+                        <td class="posts-num">2</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </section>
-    <footer class="nav footer-nav">
-        <div class="nav footer-nav">
-            <a href="">Email</a>
-            <a href="">Follow me</a>
-        </div>
-    </footer>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="nav footer-nav">
+                    <a href="mailto:hanpulous@gmail.com" target="_blank">Email</a>
+                    <a href="https://www.facebook.com/profile.php?id=100009029522286" target="_blank">Follow me</a>
+                </div>
+            </div>
+        </footer>
+    </div>
 
 <script>
     function readFunc(read_dots, read_more, readbtn) {

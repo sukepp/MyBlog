@@ -7,7 +7,9 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
+    <div class="body-container">
+        <header class="header">
+        <img src="images/bg_01.png">
         <h1 class="logo">Piers' Blog</h1>
         <div class="nav main-nav">
             <a href="index.html">WELCOME</a>
@@ -28,13 +30,13 @@
             <a href="about.html">ABOUT</a>
         </div>
     </header>
-    <section class="section">
+        <section class="section">
         <div class="mainbar">
             <h1 class="read-categary">Category: Algrithm</h1>
             <div class="read-items">
                 <div class="read-item">
                     <h2 class="read-item-title">The fast sort</h2>
-                    <p class="read-item-date">July 20, 2019</p>
+                    <p class="read-item-date">September 3, 2019</p>
                     <h3>1. Definition:</h3>
                     <p>Quick sorting, which is also the most commonly used sorting algorithm in practice, is fast and efficient. Just like the name, quick sorting is one of the best sorting algorithms.</p>
                     <h3>2. Algorithm description:</h3>
@@ -109,7 +111,7 @@
                 </div>
                 <div class="read-item">
                     <h2 class="read-item-title">The shell sort</h2>
-                    <p class="read-item-date">September 3, 2019</p>
+                    <p class="read-item-date">July 20, 2019</p>
                     <h3>1. Definition:</h3>
                     <p>The essence of Shell sorting is group insertion sorting. This method is also called narrowing incremental sorting. It was named after DL.Shell was proposed in 1959.</p>
                     <h3>2. Algorithm description:</h3>
@@ -147,19 +149,36 @@ void Shell_Sort(int a[], int n)
             </div>
             <div class="sidebar-category">
                 <h3>My Posts:</h3>
-                <a href="work_algrithm.html">Algorithm (2)</a>
-                <a href="work_px4.html">Px4 (2)</a>
-                <a href="life_film.html">Film (2)</a>
-                <a href="life_vlog.html">Vlog (2)</a>
+                <table>
+                    <tr>
+                        <td><a href="work_algrithm.html">Algorithm</a></td>
+                        <td class="posts-num">2</td>
+                    </tr>
+                    <tr>
+                        <td><a href="work_px4.html">PX4</a></td>
+                        <td class="posts-num">2</td>
+                    </tr>
+                    <tr>
+                        <td><a href="life_film.html">Film</a></td>
+                        <td class="posts-num">2</td>
+                    </tr>
+                    <tr>
+                        <td><a href="life_vlog.html">Vlog</a></td>
+                        <td class="posts-num">2</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </section>
-    <footer class="nav footer-nav">
-        <div class="nav footer-nav">
-            <a href="">Email</a>
-            <a href="">Follow me</a>
-        </div>
-    </footer>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="nav footer-nav">
+                    <a href="mailto:hanpulous@gmail.com" target="_blank">Email</a>
+                    <a href="https://www.facebook.com/profile.php?id=100009029522286" target="_blank">Follow me</a>
+                </div>
+            </div>
+        </footer>
+    </div>
     
 <script>
     function readFunc(read_dots, read_more, readbtn) {

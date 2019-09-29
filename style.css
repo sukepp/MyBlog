@@ -2,6 +2,10 @@ body{
     background-color: burlywood;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .body-container {
     background-color: white;
     margin: 50px 120px 50px 120px;
@@ -11,8 +15,8 @@ body{
 }
 
 .header img {
-    height: 150px;
-    width: 150px;
+    height: 110px;
+    width: 110px;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -29,13 +33,13 @@ body{
 .nav {
     overflow: hidden;
     font-family: Arial;
-    border-bottom: 2px solid gray;
-    border-top: 2px solid gray;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
 }
 
 .main-nav {
     padding-left: 30%;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 /* Links inside the navbar */
@@ -115,19 +119,22 @@ body{
     padding: 0;
 }
 
-.section .read-categary, .section .read-item-title {
+.section .read-categary {
+    margin-top: 0;
+    text-align: left;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+
+.section .read-item-title {
     text-align: left;
 }
 
 .section .read-item {
     overflow: hidden;
-    padding: 1% 5% 5% 5%;
+    padding: 1% 5% 5% 0%;
     margin-bottom: 3%;
-    border-bottom: 2px solid black;
-}
-
-.section .read-item:first-child {
-    border-top: 2px solid black;
+    border-bottom: 1px solid gray;
 }
 
 .section .read-item:last-child {
@@ -161,24 +168,42 @@ body{
     color: darkgray;
 }
 
-section .boldword {
+.section p.video-item {
+    text-align: center;
+}
+
+.section .boldword {
     font-weight: 600;
 }
 
-.section table, th, td {
+.section .mainbar table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+    margin-bottom: 25px;
+}
+
+.section .mainbar th {
     border: 1px solid black;
     border-collapse: collapse;
     padding: 8px;
 }
 
-.section table {
-    margin-bottom: 25px;
+.section .mainbar td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
 }
 
 .section .read-btn {
     float: right;
     position: relative;
     bottom: 0px;
+    background-color: white;
+    color: saddlebrown;
+    border: 2px solid saddlebrown;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .section .film-image {
@@ -205,38 +230,49 @@ section .boldword {
 
 .section .welcome-content a {
     text-decoration: none;
-    text-decoration-color:saddlebrown;
     padding-bottom: 20px;
+    color: saddlebrown;
 }
 
 .section .sidebar {
-    float: left;
-    padding: 3%;
+    float: right;
+/*    padding: 3%;*/
 }
 
 .section .sidebar-search {
-    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
 }
 
 .section .sidebar-search input[type=text] {
     padding: 6px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+/*    margin-top: 20px;*/
+/*    margin-bottom: 20px;*/
 }
 
 .section .sidebar-category {
     margin-top: 50%;
 }
 
+.section .sidebar-category table {
+    width: 100%;
+}
+
+.section .sidebar-category tr {
+    height: 30px;
+}
+
 .section .sidebar a {
-    display: block;
     text-decoration: none;
     color: saddlebrown;
-    padding-bottom: 10px;
-    font-size: 1.2em;
+}
+
+.section td.posts-num {
+    color: gray;
 }
 
 div.footer-nav {
+    margin-top: 20px;
     border-bottom: none;
     display: flex;
     align-items: center;
