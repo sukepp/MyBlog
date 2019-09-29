@@ -94,6 +94,7 @@
 }
 
 .section .read-item {
+    overflow: hidden;
     padding: 1% 5% 5% 5%;
     margin-bottom: 3%;
     border-bottom: 2px solid black;
@@ -112,6 +113,27 @@
     padding-bottom: 10px;
 }
 
+.section .read-item a {
+    text-decoration: none;
+    color: saddlebrown;
+}
+
+.section .read-item h2 {
+    text-align: center;
+}
+
+.section .read-item ul {
+    list-style-type: none;
+}
+
+.section .read-item li {
+    padding-bottom: 10px;
+}
+
+section .boldword {
+    font-weight: 600;
+}
+
 .section table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -126,6 +148,17 @@
     float: right;
     position: relative;
     bottom: 0px;
+}
+
+.section .film-image {
+    float: left;
+    width: 180px;
+    height: 266px;
+    padding-right: 30px;
+}
+
+.section .vlog-video {
+    float: left;
 }
 
 .section .sidebar {
