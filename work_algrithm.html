@@ -9,7 +9,7 @@
 <body>
     <div class="body-container">
         <header class="header">
-        <img src="images/bg_01.png">
+        <img src="images/bg_01.png" alt="blog_logo">
         <h1 class="logo">Piers' Blog</h1>
         <div class="nav main-nav">
             <a href="index.html">WELCOME</a>
@@ -32,7 +32,7 @@
     </header>
         <section class="section">
         <div class="mainbar">
-            <h1 class="read-categary">Category: Algrithm</h1>
+            <h2 class="read-categary">Category: Algrithm</h2>
             <div class="read-items">
                 <div class="read-item">
                     <h2 class="read-item-title">The fast sort</h2>
@@ -47,9 +47,9 @@
                         <p>Therefore, the core algorithm of the quick sort algorithm is the partition operation, that is, how to adjust the position of the reference and adjust the final position of the return reference to divide and recur.</p>
                         <h3>3. Code implementation:</h3>
                         <pre>
-    #include &ltstdio.h&gt
-    #include &ltstdlib.h&gt
-    #include &ltiostream&gt
+    #include &lt;stdio.h&gt;
+    #include &lt;stdlib.h&gt;
+    #include &lt;iostream&gt;
 
     using namespace std;
 
@@ -57,18 +57,18 @@
     {
         int i, j, pivot, temp;
 
-        if(left &gt= right)
+        if(left &gt;= right)
             return;
 
         i = left;
         j = right;
         pivot = a[left];
 
-        while(i &lt j) {
-            while(a[j] &gt= pivot && i &lt j) { 
+        while(i &lt; j) {
+            while(a[j] &gt;= pivot && i &lt; j) { 
                 j--;
             }
-            while(a[i] &lt= pivot && i &lt j) {
+            while(a[i] &lt;= pivot && i &lt; j) {
                 i++;
             }
             temp = a[i];
@@ -92,13 +92,13 @@
         int i;
         int a[] = {5, 4, 3, 9, 8, 7, 6, 2, 1, 0};
 
-        for(i = 0; i &lt 10; i++)
+        for(i = 0; i &lt; 10; i++)
             printf("%d ", a[i]);
         printf("\n");
 
         Quick_Sort(a, 10);
 
-        for(i = 0; i &lt 10; i++)
+        for(i = 0; i &lt; 10; i++)
             printf("%d ", a[i]);
         printf("\n");
 
@@ -125,11 +125,11 @@
 void Shell_Sort(int a[], int n)
 {
     int i, j, d, temp;
-    for(d = n / 2; d &gt= 1; d /= 2) 
-        for(i = d; i &lt= n; i++) {
+    for(d = n / 2; d &gt;= 1; d /= 2) 
+        for(i = d; i &lt;= n; i++) {
             temp = a[i];
             j = i;
-            while(j &gt= d && a[j - d] &gt temp) {
+            while(j &gt;= d && a[j - d] &gt; temp) {
                 a[j] = a[j - d];
                 j -= d;
             }

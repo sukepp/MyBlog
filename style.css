@@ -29,7 +29,6 @@ body{
     font-weight: bold;
 }
 
-/* Navbar container */
 .nav {
     overflow: hidden;
     font-family: Arial;
@@ -42,7 +41,10 @@ body{
     margin-bottom: 40px;
 }
 
-/* Links inside the navbar */
+/*
+ Links inside the navbar
+ Reference link: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
+*/
 .nav a {
     float: left;
     font-size: 16px;
@@ -52,13 +54,19 @@ body{
     text-decoration: none;
 }
 
-/* The dropdown container */
+/*
+ The dropdown container
+ Reference link: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
+*/
 .dropdown {
     float: left;
     overflow: hidden;
 }
 
-/* Dropdown button */
+/*
+ Dropdown button
+ Reference link: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
+*/
 .dropdown .dropbtn {
     font-size: 16px;
     border: none;
@@ -66,16 +74,20 @@ body{
     color: black;
     padding: 14px 16px;
     background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
 }
 
-/* Add a red background color to navbar links on hover */
+/*
+ Add a burlywood background color to navbar links on hover
+ Reference link: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
+*/
 .nav a:hover, .dropdown:hover .dropbtn {
     background-color:burlywood;
 }
 
-/* Dropdown content (hidden by default) */
+/*
+ Dropdown content (hidden by default)
+ Reference link: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
+*/
 .dropdown-content {
     display: none;
     position: absolute;
@@ -85,7 +97,10 @@ body{
     z-index: 1;
 }
 
-/* Links inside the dropdown */
+/*
+ Links inside the dropdown
+ Reference link: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
+*/
 .dropdown-content a {
     float: none;
     color: black;
@@ -95,12 +110,18 @@ body{
     text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
+/*
+ Add a burlywood background color to dropdown links on hover
+ Reference link: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
+*/
 .dropdown-content a:hover {
     background-color: burlywood;
 }
 
-/* Show the dropdown menu on hover */
+/*
+ Show the dropdown menu on hover
+ Reference link: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
+*/
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -112,7 +133,6 @@ body{
 .section .mainbar {
     width: 70%;
     float: left;
-/*    padding: 3%;*/
 }
 
 .section read-items {
@@ -201,7 +221,7 @@ body{
     bottom: 0px;
     background-color: white;
     color: saddlebrown;
-    border: 2px solid saddlebrown;
+    border: 1px solid saddlebrown;
     cursor: pointer;
     font-size: 16px;
 }
@@ -236,7 +256,6 @@ body{
 
 .section .sidebar {
     float: right;
-/*    padding: 3%;*/
 }
 
 .section .sidebar-search {
@@ -246,8 +265,6 @@ body{
 
 .section .sidebar-search input[type=text] {
     padding: 6px;
-/*    margin-top: 20px;*/
-/*    margin-bottom: 20px;*/
 }
 
 .section .sidebar-category {
